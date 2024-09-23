@@ -4,7 +4,7 @@
 - make it look nice
 - make it fast and secure
 
-### That's cool and all, but what is even the point/why should I use it?
+## That's cool and all, but what is even the point/why should I use it?
 - It's written in rust :P
 - LearnixTV sponsored this (he didn't I made that up)
 - It's for LearnixOS (it means that it's based to use it)
