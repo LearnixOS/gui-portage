@@ -1,4 +1,5 @@
-use portage;
+mod portage;
+mod gui;
 
 fn main() {
     println!("Hello, LearnixTV!");
