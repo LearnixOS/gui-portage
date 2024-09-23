@@ -5,7 +5,7 @@ use std::io::prelude::*;
 use std::io::{self, Write};
 use std::process::{Command, Stdio};
 
-// TAKEN FROM PKG-GENTOO
+// TAKEN FROM PKG-GENTOOt
 
 pub fn clean() {
     let child = Command::new("emerge")
