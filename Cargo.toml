@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+clap = "4.5.18"
+glob = "0.3.1"
+iced = "0.13.1"
+sedregex = "0.2.5"
+term = "1.0.0"
