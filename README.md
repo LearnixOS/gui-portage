@@ -8,7 +8,7 @@
 - It's written in rust :P
 - LearnixTV sponsored this (he didn't I made that up)
 - It's for LearnixOS (it means that it's based to use it)
-- There will be a cli interface cuz why not? ¯\_(ツ)_/¯
+- There will be a cli interface cuz why not? ¯\\\_(ツ)_/¯
 
 ## Credits :drooling:
 - cowmonk (me, the only developer rn)
