@@ -2,6 +2,7 @@
 name = "gui-portage"
 version = "0.1.0"
 edition = "2021"
+description = "GUI Software Manager for Portage. Can be used on any other Gentoo Based Distros."
 
 [[bin]]
 name = "gui-portage"

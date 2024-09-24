@@ -1,4 +1,5 @@
-mod portage;
+use clap;
+pub mod portage;
 mod gui;
 
 fn main() {
