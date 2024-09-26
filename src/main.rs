@@ -1,4 +1,4 @@
-pub mod portage;
+mod portage;
 mod gui;
 
 fn main() {

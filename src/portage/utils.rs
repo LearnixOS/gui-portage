@@ -5,11 +5,13 @@ use std::io::prelude::*;
 use std::io::{self, Write};
 use std::process::{Command, Stdio};
 
-// TAKEN FROM PKG-GENTOOt
+// +----------------------------------------------------------------------------------------------------+
+// | Mostly taken from Pkg-gentoo, some liberties taken to not ask the user (since we are making a gui) |
+// +----------------------------------------------------------------------------------------------------+
 
 pub fn clean() {
     let child = Command::new("emerge")
-        .args(&["-a", "-D", "-c"])
+        .args(&["-q", "-D", "-c"])
         .stdin(Stdio::inherit())
         .stdout(Stdio::inherit())
         .output()
@@ -33,6 +35,7 @@ pub fn deps(d: &str) {
     println!("Can not list deps of {}, you did not enable the gentoolkit feature.", d);
 }
 
+// Important for other Gentoo Based Distros (will make an ebuild for it, people can just install and it'll automatically pull in dependencies)
 #[cfg(feature = "gentoolkit")]
 pub fn files(F: &str) {
     let child = Command::new("equery")
@@ -49,19 +52,20 @@ pub fn files(F: &str) {
     println!("Can not list the files of {}, you did not enable the gentoolkit feature.", F);
 }
 
+// Force remove (will never be nessacary) | user can decide whether or not to break their system :)
 pub fn frem(f: &str) {
     let child = Command::new("emerge")
-        .args(&["-a", "-v", "-C", f])
+        .args(&["-q", "-v", "-C", f])
         .stdin(Stdio::inherit())
         .stdout(Stdio::inherit())
         .output()
-        .expect("Failed to install the package(s).");
+        .expect("Failed to (force) remove the package(s).");
     io::stdout().write_all(&child.stdout).unwrap();
 }
 
 pub fn install(i: &str) {
     let child = Command::new("emerge")
-        .args(&["-a", "-t", "-v", i])
+        .args(&["-q", "-t", "-v", i])
         .stdin(Stdio::inherit())
         .stdout(Stdio::inherit())
         .output()

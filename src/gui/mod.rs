@@ -3,6 +3,11 @@ use iced::widget::text::State;
 use iced::{Fill, Element};
 use iced::Theme;
 
+// +----------------------------------------------+
+// | Holy cow there's a crap ton of errors! :sob: |
+// | I'll (get sombody else) to fix it one day!   |
+// +----------------------------------------------+
+
 #[derive(Debug, Clone)]
 pub enum Message {}
 
