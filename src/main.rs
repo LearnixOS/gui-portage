@@ -1,4 +1,3 @@
-use clap;
 pub mod portage;
 mod gui;
 
